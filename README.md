@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Divine Uno
+#  Hi, I'm Divine Uno
 
 **Full Stack Developer | Pharmacy Tech + Web Engineering | Nigeria • Remote**
 
@@ -14,7 +14,7 @@ I am a full stack developer passionate about building scalable digital products 
 
 ---
 
-### 🛠 Tech Stack
+###  Tech Stack
 
 **Frontend:** React • TailwindCSS • HTML • CSS • JavaScript  
 **Backend:** Node.js • Express  
