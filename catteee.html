@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - Dee's Gadget</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      color: #222;
+      line-height: 1.4;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 15px 30px;
+      background: #2c3e50;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #FFD700;
+    }
+
+    /* SEARCH BAR */
+    .search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      max-width: 500px;
+      position: relative;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 12px 40px 12px 15px;
+      border-radius: 30px;
+      border: 2px solid #001f3f;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-container .search-icon {
+      position: absolute;
+      right: 15px;
+      color: #001f3f;
+      font-size: 20px;
+      pointer-events: none;
+    }
+
+    /* PRODUCTS GRID */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 100px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+      display: none;
+    }
+
+    .product-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card h3 {
+      margin: 13px 0;
+      font-size: 18px;
+    }
+
+    .product-card p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .btn {
+      background: #001f3f; /* Dark navy blue */
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #001a35;
+    }
+
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* MODAL POPUP */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #FFD700;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="project/dg.png" alt="Website Logo" /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogue.html" class="active">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🔍 SEARCH BAR -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for a product..." />
+    <span class="search-icon">🔍</span>
+  </div>
+
+   <section class="products">
+    <div class="product-card"><img src="project/DIVINE14.jpg" alt="iPhone 14"><h3>iPhone 14</h3><p>₦700,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/divine8.jpg" alt="Samsung"><h3>Samsung Galaxy S23</h3><p>₦500,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone 14 grey.jpg" alt="iPhone Grey"><h3>iPhone 14 Grey</h3><p>₦700,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/DIVINE4.jpg" alt="iPhone X"><h3>iPhone X</h3><p>₦220,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone 12 c.jpg" alt="AirPods"><h3>Iphone 12</h3><p>₦150,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone 12 cm.jpg" alt="iPhone 12 ProMax"><h3>iPhone 12 ProMax</h3><p>₦410,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone12mini.png" alt="iPhone 12 Pro"><h3>iPhone 12 Pro</h3><p>₦390,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone 15 pro max.jpg" alt="iPhone 15 ProMax"><h3>iPhone 15 ProMax</h3><p>₦820,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone 14 grey.jpg" alt="Iphone 14 Grey"><h3>Iphone 14 Grey</h3><p>₦150,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone 12.jpg" alt="iPhone 12"><h3>iPhone 12</h3><p>₦430,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone 11.jpg" alt="iPhone 11"><h3>iPhone 11</h3><p>₦295,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/divine9.jpg" alt="Samsung S21"><h3>Samsung S21 Series</h3><p>₦320,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/DIVINE2.jpg" alt="iPhone 11 Red"><h3>iPhone 11 Red</h3><p>₦295,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone 13 promax.jpg" alt="iPhone 13 ProMax"><h3>iPhone 13 ProMax</h3><p>₦550,000</p><button class="btn">Add to Cart</button></div>
+
+    <div class="product-card"><img src="project/A51.jfif" alt="Samsung"><h3>Samsung A51</h3><p>₦220,000</p><button class="btn">Add to Cart</button></div>
+  
+    <div class="product-card"><img src="project/Apple iPhone 7 32GB.jfif" alt="iPhone 7 "><h3>Apple iPhone 7 32GB</h3><p>₦100,000</p><button class="btn">Add to Cart</button></div>
+
+     <div class="product-card"><img src="project/Galaxy a16.jfif" alt="Samsung"><h3>Samsung a16</h3><p>₦200,000</p><button class="btn">Add to Cart</button></div>
+
+     <div class="product-card"><img src="project/iphone 7 b.jfif" alt="iphone 7"><h3>Iphone 7</h3><p>₦100,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/iphone 7 varies.jfif" alt="iphone 7 varies"><h3>Iphone 7</h3><p>₦100,000</p><button class="btn">Add to Cart</button></div>
+
+    <div class="product-card"><img src="project/iphone 8 pw.jfif" alt="iphone 8 pw"><h3>Iphone 8 Plus</h3><p>₦150,000</p><button class="btn">Add to Cart</button></div>
+
+    <div class="product-card"><img src="project/iphone 11 promax.jfif" alt="iphone 11 promax"><h3>IPhone 11 ProMax Grey</h3><p>₦400,000</p><button class="btn">Add to Cart</button></div>
+
+    <div class="product-card"><img src="project/iPhone 12 promax gold.jfif" alt="iPhone 12 promax gold"><h3>IPhone 12 ProMax</h3><p>₦600,000</p><button class="btn">Add to Cart</button></div>
+
+    <div class="product-card"><img src="project/iphone 12 promaxw.jfif" alt="iphone 12 promax"><h3>iPhone 12 ProMax White</h3><p>₦600,000</p><button class="btn">Add to Cart</button></div>
+
+
+    <div class="product-card"><img src="project/xs max 256.jfif" alt="xs max 256"><h3>IPhone XS Max 256</h3><p>₦290,000</p><button class="btn">Add to Cart</button></div>
+  
+     <div class="product-card"><img src="project/xs max w.jfif" alt="xs max w"><h3>iPhone XsMax</h3><p>₦290,000</p><button class="btn">Add to Cart</button></div>
+
+     <div class="product-card"><img src="project/xs max black.jfif" alt="xs max black"><h3>iPhone XsMax Black</h3><p>₦290,000</p><button class="btn">Add to Cart</button></div>
+
+     <div class="product-card"><img src="project/s10g.jfif" alt="s10g.jfif"><h3>Samsung S10</h3><p>₦260,000</p><button class="btn">Add to Cart</button></div>
+    <div class="product-card"><img src="project/s10b.jfif" alt="s10b"><h3>Samsung S10</h3><p>₦260,000</p><button class="btn">Add to Cart</button></div>
+
+    <div class="product-card"><img src="project/s9.jfif" alt="s9.jfif"><h3>Samsung S9 Black</h3><p>₦240,000</p><button class="btn">Add to Cart</button></div>
+
+    <div class="product-card"><img src="project/iphone12purple.jfif" alt="iphone12purple"><h3>iPhone 12 Purple>₦450,000</p><button class="btn">Add to Cart</button></div>
+
+    <div class="product-card"><img src="project/iphone12 green.jfif" alt="iphone12 green.jfif"><h3>iPhone 12 Grey </h3><p>₦450,000</p><button class="btn">Add to Cart</button></div>
+
+    <div class="product-card"><img src="project/iphone 17 air g.jfif" alt="iphone 17 air g"><h3>iPhone 17 air Grey</h3><p>₦1,000,000</p><button class="btn">Add to Cart</button></div>
+  </section>
+  <footer>
+    <p>&copy; 2025 DEE'S GADGET. All rights reserved.</p>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg" />
+  </div>
+
+  <script>
+    const products = Array.from(document.querySelectorAll(".product-card"));
+    const itemsPerPage = 8;
+    let currentIndex = 0;
+
+    function showNextBatch() {
+      if (currentIndex >= products.length) return;
+      const nextBatch = products.slice(currentIndex, currentIndex + itemsPerPage);
+      nextBatch.forEach((p) => {
+        p.style.display = "block";
+        setTimeout(() => p.classList.add("visible"), 50);
+      });
+      currentIndex += itemsPerPage;
+    }
+
+    showNextBatch();
+
+    // Infinite scroll
+    window.addEventListener("scroll", () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+        showNextBatch();
+      }
+    });
+
+    // Image popup modal
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".product-card img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.onclick = () => (modal.style.display = "none");
+    window.onclick = (event) => {
+      if (event.target === modal) modal.style.display = "none";
+    };
+
+    // 🔍 SEARCH FUNCTIONALITY
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", () => {
+      const filter = searchInput.value.toLowerCase();
+      products.forEach((card) => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        if (name.includes(filter)) {
+          card.style.display = "block";
+          card.classList.add("visible");
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

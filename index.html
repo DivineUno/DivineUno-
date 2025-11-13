@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEE'S GADGET</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .hero {
+      background-color: #1435EB;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+    .phones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .phone-card {
+      background: white;
+      margin: 10px;
+      padding: 15px;
+      width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .phone-card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  
+ <header>
+  <div class="header-container">
+    <img src="project/dg.png" alt="Website Logo" class="logo">
+    <h1>DEE'S GADGET</h1>
+    <p>Your Trusted Phone Store</p>
+  </div>
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DG Phones - Your Trusted Phone Store</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      padding: 15px 30px;
+    }
+
+    .navbar .logo img {
+      height: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ff9900;
+    }
+
+    /* Search bar */
+    .search-box {
+      margin-left: 20px;
+    }
+
+    .search-box input {
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    /* Hero section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 10vh;
+      background: #fff;
+      padding: 20px; 
+    }
+
+    .hero img {
+      height: 120px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #ff9900;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #cc7a00;
+    }
+
+    /* Mobile */
+    .menu-toggle {
+      display:none;
+      font-size: 24px;
+      color: #FFD700;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        padding: 15px;
+        border-radius: 6px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="project/dg.png" alt="Logo">
+      </div>
+
+      <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Catalogue.html">Catalogue</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="search-box">
+          <input type="text" placeholder="Search...">
+        </li>
+      </ul>
+    </nav>
+    <style type="">
+      nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333; /* change color here */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6600; /* hover color */
+}
+
+    </style>
+  </header>
+
+  <!-- Hero Section -->
+  
+
+  <script>
+    // Toggle mobile menu
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("active");
+    }
+  </script>
+
+</header> 
+
+<style type="">/* Navbar styling */
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo left, links right */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo img {
+  height: 110px;  /* adjust size */
+  width:auto;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00; /* hover color */
+
+}
+header {
+  display: flex;
+  flex-direction: column;   /* stack items vertically */
+  align-items: center;      /* center horizontally */
+  text-align: center;       /* align text for heading and motto */
+  padding: 20px;
+}
+
+header img.logo {
+  max-height: 120px;  /* adjust size as needed */
+  width: auto;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 5px 0;       /* small gap above/below */
+}
+
+header p {
+  margin: 0;
+  font-style: italic;
+  color: #333;         /* softer text for motto */
+}
+
+header {
+  display: flex;              /* use flexbox */
+  flex-direction: column;     /* stack logo, heading, and motto */
+  align-items: center;        /* center horizontally */
+  justify-content: center;    /* center vertically */
+  text-align: center;         /* align text in the middle */
+  padding: 20px;
+}
+
+header img.logo {
+  max-height: 100px;   /* control logo size */
+  width: auto;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 5px 0;
+}
+
+header p {
+  margin: 0;
+  font-style: italic;
+  color: #555;
+}
+header {
+  display: flex;
+  flex-direction: column;   /* stack items vertically */
+  align-items: center;      /* center horizontally */
+  text-align: center;       /* align text for heading and motto */
+  padding: 20px;
+}
+
+header img.logo {
+  max-height: 120px;  /* adjust size as needed */
+  width: auto;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 5px 0;       /* small gap above/below */
+}
+
+header p {
+  margin: 0;
+  font-style: italic;
+  color: #333;         /* softer text for motto */
+}
+
+</style>
+    
+<div class="hero">
+    <h2>Discover the Latest Phones at soothing prices</h2>
+    <p>Top brands. Great prices.</p>
+  </div>
+
+  <div class="dropdown">
+  <!-- 3 lines menu button -->
+  <button class="dropbtn">☰</button>
+  <div class="dropdown-content">
+    <a href="#">Buy</a>
+    <a href="#">Sell</a>
+    <a href="#">Swap</a>
+    <a href="#">Support</a>
+  </div>
+</div>
+<style type="text/css">
+/* Dropdown container */
+.dropdown {
+  position: absolute;      /* position relative to the phone card */
+  top: 10px;              /* push it down a bit */
+  right: 10px;            /* move it to the right side */
+}
+
+/* Style for three-line (hamburger) button */
+.dropbtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color:white;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+  color: #007bff;
+}
+
+/* Dropdown menu (HIDDEN by default) */
+.dropdown-content {
+  display: none;   /* ✅ this hides it until button is clicked */
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Dropdown menu links */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown when toggled */
+.show {
+  display: block;
+}
+
+/* Make sure phone cards can hold positioned items */
+.IPHONE {
+  position: relative;   /* ✅ needed so .dropdown can align inside it */
+}
+</style>
+
+
+<script>
+  document.querySelectorAll(".dropbtn").forEach(button => {
+    button.addEventListener("click", function(e) {
+      e.stopPropagation();
+      let dropdown = this.nextElementSibling;
+
+      // Close others
+      document.querySelectorAll(".dropdown-content").forEach(menu => {
+        if (menu !== dropdown) menu.classList.remove("show");
+      });
+
+      // Toggle this one
+      dropdown.classList.toggle("show");
+    });
+  });
+
+  // Close if clicked outside
+  window.addEventListener("click", function() {
+    document.querySelectorAll(".dropdown-content").forEach(menu => {
+      menu.classList.remove("show");
+    });
+  });
+</script>
+
+
+  <section class="phones">
+    <div class="IPHONE">
+      <img src="project/DIVINE14.jpg" alt="DIVINE14.jpg" width="250" height="250">
+      <h3>Iphones</h3>
+      <p></p>
+    </div>
+    <div class="iphones">
+      <img src="project/DIVINE4.jpg" alt="DIVINE4,jpg" width="250" height="250">
+      <h3>Iphones</h3>
+      <p></p>
+    </div>
+
+    </div>
+    <div class="Samsung">
+      <img src="project/divine8.jpg" alt="divine8.jpg" width="250" height="250">
+      <h3>Samsung</h3>
+      <p></p>
+    </div>
+
+    </div>
+    <div class="samsungs">
+      <img src="project/Galaxy a16.jfif" alt="Galaxy a16.jfif" width="250" height="250">
+      <h3>Samsung</h3>
+      <p></p>
+    </div>
+<style type="text/css">
+.phones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background: #f5f5f5;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+/Phone Card /
+.phones .IPHONE {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/Hover Effect /
+.phones .IPHONE:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+/Phone Image/
+.phones img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+/ Phone Title /
+.phones h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0 5px;
+}
+/Phone Description /
+.phones p {
+  font-size: 16px;
+  color: #555;
+}
+</style>
+
+
+    <!-- Add more phone cards here -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DEE'S GADGET. All rights reserved.</p>
+  </footer>
+
+</body>
+
+
+</body>
+</html>
